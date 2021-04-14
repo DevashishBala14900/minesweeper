@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/menuScreen"
+    android:foregroundTint="#b9b9b9"
+    >
+    <TextView
+        android:id="@+id/txv_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Select Difficulty"
+        android:textSize="30sp"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp" />
+
+    <RadioGroup
+        android:id="@+id/difficulties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/txv_difficulty"
+        app:layout_constraintTop_toBottomOf="@+id/txv_difficulty">
+
+        <RadioButton
+            android:id="@+id/easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000"
+            android:textColor="#000"
+            android:text="Easy"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000"
+            android:textColor="#000"
+            android:text="Normal"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000"
+            android:textColor="#000"
+            android:text="Hard"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:buttonTint="#000"
+            android:text="Custom"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edt_txv_rows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:ems="5"
+        android:hint="rows"
+        android:inputType="number"
+        android:textColor="#000"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/difficulties"
+        app:layout_constraintTop_toBottomOf="@+id/difficulties"
+        android:layout_marginLeft="28dp"
+        android:autofillHints=""/>
+
+    <EditText
+        android:id="@+id/edt_txv_column"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="columns"
+        android:inputType="number"
+        android:textColor="#000"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/edt_txv_rows"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txv_rows"
+        android:autofillHints=""/>
+
+    <EditText
+        android:id="@+id/edt_txv_mines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="mines"
+        android:inputType="number"
+        android:textColor="#000"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/edt_txv_column"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txv_column"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="#35E316"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Start"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txv_mines" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Integer> st = new Stack<Integer>();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of operations : ");
+        int n = sc.nextInt();
+
+        for(int i=0;i<n;i++){
+            System.out.println("\nCurrent Stack : " + st);
+            System.out.print("Enter operation : 1) Push 2)Pop : " );
+            int x = sc.nextInt();
+
+            if(x==1){
+                System.out.print("Enter number to be pushed : ");
+                int num = sc.nextInt();
+                stack_push(st, num);
+            } else {
+                stack_pop(st);
+            }
+        }
+        System.out.println("\nCurrent Stack : " + st);
+    }
+    static void stack_push(Stack<Integer> st, int num) {
+        st.push(num);
+    }
+
+    static void stack_pop(Stack<Integer> st) {
+        Integer y = (Integer) st.pop();
+        System.out.print("Popped number " + y + "\n");
+    }
+}
